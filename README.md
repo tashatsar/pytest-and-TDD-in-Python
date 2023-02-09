@@ -61,4 +61,4 @@ With several arguments: `python -m pytest -s -v`
 
 
 
-[Unit Testing and Test Driven Development in Python](https://udemy.com/course/unit-testing-and-tdd-in-python) 🚨✅✔️
+[Unit Testing and Test Driven Development in Python course](https://udemy.com/course/unit-testing-and-tdd-in-python) 🚨✅✔️
