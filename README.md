@@ -40,7 +40,7 @@ Robert Martin created the following Laws of TDD in his book “Clean Code: A Han
 Install plugin:
 `pip install pytest-cov`: coverage reporting, compatible with distributed testing
 
-### run `pytest` and command line arguments
+### run `pytest` with command line arguments
 Run from the directory with tests: 
 `python -m pytest`
 for running all tests in all modules from the current working directory (pay attention to [naming](#pytest)). With command line arguments (all params [here](https://docs.pytest.org/en/7.1.x/reference/reference.html#command-line-flags)):
