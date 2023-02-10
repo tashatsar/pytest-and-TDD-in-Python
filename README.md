@@ -99,12 +99,12 @@ def test_to_skip():
 <!-- can create instance of a class -->
 
 
-## Some courses 
+## Some courses 💻📕🚀
 - [Elegant Automation Frameworks with Python and Pytest course](https://www.udemy.com/course/elegant-automation-frameworks-with-python-and-pytest/): in progress 🐌🐌🐌
-  - Pro: tutor's language is pretty alive, with noce sence of humour. Explanations are detailed and motivating 👌
-  - Contra: I'am still in the process, will be continued
-  - Duration: 6 hours ⌚
+  - 👍Pro: tutor's language is pretty alive, with noce sence of humour. Explanations are detailed and motivating 👌
+  - 👎Cons: I'am still in the process, will be continued🐌
+  - ⌚Duration: 6 hours 
 - [Unit Testing and Test Driven Development in Python course](https://udemy.com/course/unit-testing-and-tdd-in-python)
-  - Pro: short course to get into the topic fast with many examples to start using immediately.
-  - Contra: sections about mocks and XUnit style are not detailed at all and provided too fast. 🚗💨 Code lacks explanations in general. Sometimes it's hard to follow the logic of the code.💩 ALso the course is pretty old, have not been updated since 2019. 👴
-  - Duration: 2 hours ⌚
+  - 👍Pro: short course to get into the topic fast with many examples to start using immediately.
+  - 👎Cons: sections about mocks and XUnit style are not detailed at all and provided too fast. 🚗💨 Code lacks explanations in general. Sometimes it's hard to follow the logic of the code.💩 ALso the course is pretty old, have not been updated since 2019. 👴
+  - ⌚Duration: 2 hours 
