@@ -56,8 +56,7 @@ Command line arguments for `pytest-cov` plugin (more params [here](https://pytes
 With several arguments: `python -m pytest -s -v`
 
 ### `pytest` decorators
-
-#### `@pytest.fixture`: need to use the same parameter for several tests? 
+- `@pytest.fixture`: need to use the same parameter for several tests? 
 Fixture will be executed before the test!
 ```py
 @pytest.fixture()
@@ -75,7 +74,7 @@ def test_no_fixture():
   assert smth
 ```
 
-#### `@pytest.mark.parametrize`: need to use different parameter sin the same test? 
+- `@pytest.mark.parametrize`: need to use different parameter sin the same test? 
 Don't use loops, use parametrization!
 
 ```py
@@ -84,7 +83,7 @@ def test_with_params(our_params):
   assert our_params
 ```
  
-#### `@pytest.mark.skip`: need to skip a test? 
+- `@pytest.mark.skip`: need to skip a test? 
 Test `test_to_skip` wont't be executed!
 
 ```py
