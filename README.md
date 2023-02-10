@@ -100,7 +100,7 @@ def test_to_skip():
 
 
 ## Some courses 
-- [Elegant Automation Frameworks with Python and Pytest course](https://www.udemy.com/course/elegant-automation-frameworks-with-python-and-pytest/) - in p
+- [Elegant Automation Frameworks with Python and Pytest course](https://www.udemy.com/course/elegant-automation-frameworks-with-python-and-pytest/): in progress 🐌🐌🐌
   - Pro: tutor's language is pretty alive, with noce sence of humour. Explanations are detailed and motivating 👌
   - Contra: I'am still in the process, will be continued
   - Duration: 6 hours ⌚
