@@ -141,7 +141,7 @@ def test_to_skip():
   - 👍Pro: tutor's language is pretty alive, with nice sence of humour. Explanations are detailed, the course has a lot of  examples of code that are very easy to understand or reuse. I also liked topics covered in the course👌 
   - 👎Cons: Some explanations can seem too long and too detailed, the lecturer can step aside. Sometimes it can seem that there is not ehough or not at all theoretical part, just examples. I used speed 2x, but desired would be around 3x🐌. Last update of the course was June 2020👴
   - ⌚Duration: 6 hours 
-- [Unit Testing and Test Driven Development in Python course](https://udemy.com/course/unit-testing-and-tdd-in-python): [certificate](https://udemy-certificate.s3.amazonaws.com/image/UC-7e412d6d-5ac2-41b3-ab39-0936dc665643.jpg)
+- [Unit Testing and Test Driven Development in Python course](https://udemy.com/course/unit-testing-and-tdd-in-python):  [certificate](https://udemy-certificate.s3.amazonaws.com/image/UC-7e412d6d-5ac2-41b3-ab39-0936dc665643.jpg)
   - 👍Pro: short course to get into the topic fast with many examples to start using immediately.
   - 👎Cons: sections about mocks and XUnit style are not detailed at all and provided too fast. 🚗💨 Code lacks explanations in general. Sometimes it's hard to follow the logic of the code.💩 ALso the course is pretty old, have not been updated since 2019. 👴
   - ⌚Duration: 2 hours 
