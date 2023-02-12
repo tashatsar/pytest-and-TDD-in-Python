@@ -1,7 +1,7 @@
 # Unit testing with `pytest`🐍🚨
 
 
-## Tests, unit tests, TDD
+## Tests, unit tests, TDD 🍎🍄
 ### Levels of testing
 ✨ **Unit testing**: testing fucntions and classes. Done by developers. Smallest unit of testing possible, module or component is tested in isolation. 
 
@@ -135,8 +135,6 @@ def test():
 def test_to_skip():
   assert smth
 ```
-
-
 
 ## Some courses 💻📕🚀
 - [Elegant Automation Frameworks with Python and Pytest course](https://www.udemy.com/course/elegant-automation-frameworks-with-python-and-pytest/): in progress 🐌🐌🐌
