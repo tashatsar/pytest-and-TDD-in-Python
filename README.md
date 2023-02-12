@@ -44,7 +44,7 @@ python_classes = *Tests
 python_functions = check_*
 ```
 
-### Install `pytest`
+### Install `pytest`🧰📦
 
 `pip install pytest`: requires Python 3.7+
 Install plugins:
@@ -62,6 +62,9 @@ for running all tests in all modules from the current working directory (pay att
 Command line arguments for `pytest-cov` plugin (more params [here](https://pytest-cov.readthedocs.io/en/latest/config.html)): 
 - `python -m pytest --cov-report=term`: generate coverage report in terminal
 - `python -m pytest --cov-report=html`: generate coverage report as HTML
+
+Command line for `pytest-html` plugin:
+- `python -m pytest --html="results.html"`: generate HTML report what is called "results.html"
 
 With several arguments: `python -m pytest -s -v`
 
@@ -128,9 +131,7 @@ def test():
 def test_to_skip():
   assert smth
 ```
-Possible fixture scopes include function, class, module, package, and session
 
-<!-- can create instance of a class -->
 
 
 ## Some courses 💻📕🚀
