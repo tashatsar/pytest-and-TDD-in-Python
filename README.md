@@ -1,7 +1,8 @@
 # Unit testing with `pytest`🐍🚨
 
 
-## Levels of testing
+## Tests, unit tests, TDD
+### Levels of testing
 ✨ **Unit testing**: testing fucntions and classes. Done by developers. Smallest unit of testing possible, module or component is tested in isolation. 
 
 ✨✨ **Component testing**: testing interfacing issues between the modules. Done by testers.
@@ -10,20 +11,20 @@
 
 ✨✨✨✨**Acceptance testing**: testing if application satisfies end-user requirements and can be deployed. Can be made by testers as well as final users (alpha and beta testing).  
 
-## What is unit testing?
+### What is unit testing?
 - Unit testing tests individual modules independently 🍎
 - Unit tests are the first filter for catcing bugs 🐛
 - Tests should run fast with automated execution 🚀
 - Unit testing is for development environment rather than the production one 🔨
 
-## What is test driven development (TDD)?
+### What is test driven development (TDD)?
 - Tests are written before the production code
 - Tests and production code are written step by step
 - The process is iterative: 🚨red pahse, ✅green phase, 🔨refactor phase
 
 🚨write a failing unit test -> ✅write prod code to pass only this test -> 🔨refactor test and code to make it clean -> 🚨write a new failing unit test -> ✅write prod code to pass only the new test -> 🔨refactor test and code to make it clean ->🚨-> ✅->🔨-> etc. until the feature is complete
 
-## Laws of TDD
+#### Laws of TDD
 Robert Martin created the following Laws of TDD in his book “Clean Code: A Handbook of Agile Software Development”:
 1. You may not write any production code until you have written a failing unit test.
 2. You may not write more of a unit test than is sufficient to fail, and not compiling is failing.
@@ -35,11 +36,20 @@ Robert Martin created the following Laws of TDD in his book “Clean Code: A Han
 - **test class** should have "Test"  in the beginnig of the class name: `TestClass`, `TestSimilarThings`. Test class should NOT have `__init__` method.
 - **filenames** for test modules should have "test" in the beginning or end of the filename: `test_*.py` or `*_test.py`.
 
+BTW, the naming rules described above can be changed in case you need. For doing so create a file named `pytest.ini` in the directory with test. Fill the file with the following content. Let's suppose we want to replace word "test" for test functions only with word "check" (this is just an example):
+```
+[pytest]
+python_files = test_*
+python_classes = *Tests
+python_functions = check_*
+```
+
 ### Install `pytest`
 
 `pip install pytest`: requires Python 3.7+
-Install plugin:
-`pip install pytest-cov`: coverage reporting, compatible with distributed testing
+Install plugins:
+- `pip install pytest-cov`: coverage reporting, produces coverage reports
+- `pip install pytest-html`: generates a HTML report for test results
 
 ### Run `pytest` with command line arguments
 Run from the directory with tests: 
@@ -55,8 +65,8 @@ Command line arguments for `pytest-cov` plugin (more params [here](https://pytes
 
 With several arguments: `python -m pytest -s -v`
 
-### `pytest` decorators
-- `@pytest.fixture`: need to use the same parameter for several tests? 
+### `pytest` decorators 🌺📦
+- **`@pytest.fixture`**: need to use the same parameter for several tests? 
 Fixture will be executed before the test!
 ```py
 @pytest.fixture()
@@ -74,7 +84,7 @@ def test_no_fixture():
   assert smth
 ```
 
-- `@pytest.mark.parametrize`: need to use different parameter sin the same test? 
+- **`@pytest.mark.parametrize`**: need to use different parameter sin the same test? 
 Don't use loops, use parametrization!
 
 ```py
@@ -82,8 +92,32 @@ Don't use loops, use parametrization!
 def test_with_params(our_params):
   assert our_params
 ```
+- **`@pytest.mark`**: need to create groups of tests to be run without other tests? Just mark your tests!
+```py 
+@pytest.mark.feature_a
+def test_1_about_feature_A():
+  assert smth
+
+@pytest.mark.feature_a
+def test_2_about_feature_A():
+  assert smth
+  
+def test_1_about_feature_B():
+  assert smth
+
+```
+To launch only test_1_about_feature_A and test_2_about_feature_A run in command line `python -m pytest -m feature_a`. In case you have to run several tests by how they are marked, use `python -m pytest -m "feature_a or feature_b"` (for tests that are marked with at least one of decoratos) and `python -m pytest -m "feature_a or feature_b"`(for tests that are marked with both at the same time). Those code markers can be described in the `pytest.ini` file. It is higly recommended for better code readability. For example:
+```
+[pytest]
+python_files = test_*
+python_classes = *Tests
+python_functions = test_*
+
+markers =
+  feature_a: All tests for feature A testing 
+```
  
-- `@pytest.mark.skip`: need to skip a test? 
+- **`@pytest.mark.skip`**: need to skip a test? 
 Test `test_to_skip` wont't be executed!
 
 ```py
