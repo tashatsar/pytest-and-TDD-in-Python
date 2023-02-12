@@ -50,7 +50,7 @@ python_functions = check_*
 Install plugins:
 - `pip install pytest-cov`: coverage reporting, produces coverage reports
 - `pip install pytest-html`: generates a HTML report for test results
-- `pip install pytest-xdist`: allows distributed execution modes
+- `pip install pytest-xdist`: allows distributed execution modes (parallel test exevution). Tests have to be isolated, otherwise doesn't make sence :melting_face:
 
 ### Run `pytest` with command line arguments
 Run from the directory with tests: 
@@ -68,7 +68,7 @@ Command line for `pytest-html` plugin:
 - `python -m pytest --html="results.html"`: generate HTML report what is called "results.html"
 
 Command line for `pytest-html` plugin:
-- `python -m pytest -n4`: run test using 4 treads. n3 is for 3 threads, etc. 
+- `python -m pytest -n4`: run test using 4 treads. n3 is for 3 threads, etc. `-nauto` is supported. 
 
 With several arguments: `python -m pytest -s -v`
 
