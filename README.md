@@ -137,7 +137,7 @@ def test_to_skip():
 ```
 
 ## Some courses 💻📕🚀
-- [Elegant Automation Frameworks with Python and Pytest course](https://www.udemy.com/course/elegant-automation-frameworks-with-python-and-pytest/): in progress 🐌🐌🐌
+- [Elegant Automation Frameworks with Python and Pytest course](https://www.udemy.com/course/elegant-automation-frameworks-with-python-and-pytest/):[certificate](https://udemy-certificate.s3.amazonaws.com/image/UC-76f2eb84-d321-4658-98fe-607e99e0eacd.jpg) 🐌🐌🐌
   - 👍Pro: tutor's language is pretty alive, with nice sence of humour. Explanations are detailed, the course has a lot of  examples of code that are very easy to understand or reuse. I also liked topics covered in the course👌 
   - 👎Cons: Some explanations can seem too long and too detailed, the lecturer can step aside. Sometimes it can seem that there is not ehough or not at all theoretical part, just examples. I used speed 2x, but desired would be around 3x🐌. Last update of the course was June 2020👴
   - ⌚Duration: 6 hours 
