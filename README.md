@@ -115,12 +115,16 @@ def test_1_about_feature_A():
 @pytest.mark.feature_a
 def test_2_about_feature_A():
   assert smth
-  
+
+@pytest.mark.feature_a  
 def test_1_about_feature_B():
+  assert smth
+  
+def test_1_about_feature_C():
   assert smth
 
 ```
-To launch only test_1_about_feature_A and test_2_about_feature_A run in command line `python -m pytest -m feature_a`. In case you have to run several tests by how they are marked, use `python -m pytest -m "feature_a or feature_b"` (for tests that are marked with at least one of decoratos) and `python -m pytest -m "feature_a or feature_b"`(for tests that are marked with both at the same time). Those code markers can be described in the `pytest.ini` file. It is higly recommended for better code readability. For example:
+To launch only `test_1_about_feature_A` and `test_2_about_feature_A` run in command line `python -m pytest -m feature_a`. In case you have to run several tests by how they are marked, use `python -m pytest -m "feature_a or feature_b"` (for tests that are marked with at least one of decoratos) and `python -m pytest -m "feature_a or feature_b"`(for tests that are marked with both at the same time). Those code markers can be described in the `pytest.ini` file. The description is higly recommended for better code readability. For example:
 ```
 [pytest]
 python_files = test_*
