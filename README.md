@@ -2,15 +2,21 @@
 
 
 ## Tests, unit tests, TDD 🍎🍄
-### Levels of testing
-✨ **Unit testing**: testing fucntions and classes. Done by developers. Smallest unit of testing possible, module or component is tested in isolation. 
+### Types of tests (according to [Atlassian](https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing))
+✨ **Unit testing**: testing fucntions and classes. Smallest unit of testing possible, module or component is tested in isolation. 
 
-✨✨ **Component testing**: testing interfacing issues between the modules. Done by testers.
+✨ **Integration testing**: testing how do different modules or services work together. It is ore expensive to run as it requires multiple parts.
 
-✨✨✨ **System testing**: testing application as a whole thing. Done by testers. Made in environment similar to the production one.
+✨ **Functional testing**: testing that output matches the business requirements.
 
-✨✨✨✨**Acceptance testing**: testing if application satisfies end-user requirements and can be deployed. Can be made by testers as well as final users (alpha and beta testing).  
+✨ **End-to-end testing**: testing by replicating a user behavior in a complete application environment. Useful, but expensive to perform: the best would be to have a few key end-to-end tests and rely more on lower level types of testing (unit and integration tests).
 
+✨**Acceptance testing**: testing if application satisfies end-user requirements and can be deployed. Can be made by testers as well as final users (alpha and beta testing).
+
+✨ **Performance testing**: testing how a system performs under a particular workload: measure the reliability, speed, scalability, and responsiveness. 
+
+✨ **Smoke testing**: testing the basic functionality of an application: meant to be quick to execute, checking that the major features of your system are working as expected.
+  
 ### What is unit testing?
 - Unit testing tests individual modules independently 🍎
 - Unit tests are the first filter for catcing bugs 🐛
@@ -46,8 +52,9 @@ python_functions = check_*
 
 ### Install `pytest`🧰📦
 
-`pip install pytest`: requires Python 3.7+
-Install plugins:
+`pip install pytest`: requires Python 3.7+.
+
+Install some of plugins:
 - `pip install pytest-cov`: coverage reporting, produces coverage reports
 - `pip install pytest-html`: generates a HTML report for test results
 - `pip install pytest-xdist`: allows distributed execution modes (parallel test exevution). Tests have to be isolated, otherwise doesn't make sence :melting_face:
@@ -137,11 +144,11 @@ def test_to_skip():
 ```
 
 ## Some courses 💻📕🚀
-- [Elegant Automation Frameworks with Python and Pytest course](https://www.udemy.com/course/elegant-automation-frameworks-with-python-and-pytest/):[certificate](https://udemy-certificate.s3.amazonaws.com/image/UC-76f2eb84-d321-4658-98fe-607e99e0eacd.jpg) 🐌🐌🐌
+- [Elegant Automation Frameworks with Python and Pytest course](https://www.udemy.com/course/elegant-automation-frameworks-with-python-and-pytest/):🐌🐌🐌
   - 👍Pro: tutor's language is pretty alive, with nice sence of humour. Explanations are detailed, the course has a lot of  examples of code that are very easy to understand or reuse. I also liked topics covered in the course👌 
   - 👎Cons: Some explanations can seem too long and too detailed, the lecturer can step aside. Sometimes it can seem that there is not ehough or not at all theoretical part, just examples. I used speed 2x, but desired would be around 3x🐌. Last update of the course was June 2020👴
   - ⌚Duration: 6 hours 
-- [Unit Testing and Test Driven Development in Python course](https://udemy.com/course/unit-testing-and-tdd-in-python):  [certificate](https://udemy-certificate.s3.amazonaws.com/image/UC-7e412d6d-5ac2-41b3-ab39-0936dc665643.jpg)
+- [Unit Testing and Test Driven Development in Python course](https://udemy.com/course/unit-testing-and-tdd-in-python):
   - 👍Pro: short course to get into the topic fast with many examples to start using immediately.
   - 👎Cons: sections about mocks and XUnit style are not detailed at all and provided too fast. 🚗💨 Code lacks explanations in general. Sometimes it's hard to follow the logic of the code.💩 ALso the course is pretty old, have not been updated since 2019. 👴
   - ⌚Duration: 2 hours 
