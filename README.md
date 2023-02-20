@@ -3,7 +3,7 @@
 
 ## Tests, unit tests, TDD 🍎🍄
 ### Types of tests (according to [Atlassian](https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing))
-✨ **Unit testing**: testing fucntions and classes. Smallest unit of testing possible, module or component is tested in isolation. 
+✨ **Unit testing**: testing functions and classes. Smallest unit of testing possible, module or component is tested in isolation. 
 
 ✨ **Integration testing**: testing how do different modules or services work together. It is ore expensive to run as it requires multiple parts.
 
