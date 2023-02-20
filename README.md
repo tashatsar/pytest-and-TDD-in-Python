@@ -3,30 +3,30 @@
 
 ## Tests, unit tests, TDD 🍎🍄
 ### Types of tests (according to [Atlassian](https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing))
-✨ **Unit testing**: testing functions and classes. Smallest unit of testing possible, module or component is tested in isolation. 
+✨ **Unit testing**: testing functions and classes. The smallest unit of testing possible, module or component is tested in isolation. 
 
-✨ **Integration testing**: testing how do different modules or services work together. It is more expensive to run as it requires multiple parts.
+✨ **Integration testing**: testing how different modules or services work together. It is more expensive to run as it requires multiple parts.
 
 ✨ **Functional testing**: testing that output matches the business requirements.
 
-✨ **End-to-end testing**: testing by replicating a user behavior in a complete application environment. Useful, but expensive to perform: the best would be to have a few key end-to-end tests and rely more on lower level types of testing (unit and integration tests).
+✨ **End-to-end testing**: testing by replicating a user behavior in a complete application environment. Useful, but expensive to perform: the best would be to have a few key end-to-end tests and rely more on lower-level types of testing (unit and integration tests).
 
-✨**Acceptance testing**: testing if application satisfies end-user requirements and can be deployed. Can be made by testers as well as final users (alpha and beta testing).
+✨**Acceptance testing**: testing if the application satisfies end-user requirements and can be deployed. Can be made by testers as well as final users (alpha and beta testing).
 
-✨ **Performance testing**: testing how a system performs under a particular workload: measure the reliability, speed, scalability, and responsiveness. 
+✨ **Performance testing**: testing how a system performs under a particular workload. Measuring the reliability, speed, scalability, and responsiveness. 
 
 ✨ **Smoke testing**: testing the basic functionality of an application: meant to be quick to execute, checking that the major features of your system are working as expected.
   
 ### What is unit testing?
 - Unit testing tests individual modules independently 🍎
-- Unit tests are the first filter for catcing bugs 🐛
+- Unit tests are the first filter for catching bugs 🐛
 - Tests should run fast with automated execution 🚀
-- Unit testing is for development environment rather than the production one 🔨
+- Unit testing is for the development environment rather than the production one 🔨
 
 ### What is test driven development (TDD)?
 - Tests are written before the production code
 - Tests and production code are written step by step
-- The process is iterative: 🚨red pahse, ✅green phase, 🔨refactor phase
+- The process is iterative: 🚨red phase, ✅green phase, 🔨refactor phase
 
 🚨write a failing unit test -> ✅write prod code to pass only this test -> 🔨refactor test and code to make it clean -> 🚨write a new failing unit test -> ✅write prod code to pass only the new test -> 🔨refactor test and code to make it clean ->🚨-> ✅->🔨-> etc. until the feature is complete
 
@@ -37,12 +37,12 @@ Robert Martin created the following Laws of TDD in his book “Clean Code: A Han
 3. You may not write more production code than is sufficient to pass the currently failing unit test
 
 ## `pytest`📦
-`pytest` is a [framework for tests](https://docs.pytest.org/en/7.2.x/). It uses standart Python assert statement 🐍
-- **tests** are Python functions with "test" in the beginnig of the fucntion name: `test_pipeline_step`, `test_sum`. Tests can be grouped by putting them in the same module or class.
-- **test class** should have "Test"  in the beginnig of the class name: `TestClass`, `TestSimilarThings`. Test class should NOT have `__init__` method.
-- **filenames** for test modules should have "test" in the beginning or end of the filename: `test_*.py` or `*_test.py`.
+`pytest` is a [framework for tests](https://docs.pytest.org/en/7.2.x/). It uses standard Python assert statement 🐍
+- **tests** are Python functions with "test" at the beginning of the function name: `test_pipeline_step`, `test_sum`. Tests can be grouped by putting them in the same module or class.
+- **test class** should have "Test" at the beginning of the class name: `TestClass`, `TestSimilarThings`. Test class should NOT have `__init__` method.
+- **filenames** for test modules should have "test" at the beginning or end of the filename: `test_*.py` or `*_test.py`.
 
-BTW, the naming rules described above can be changed in case you need. For doing so create a file named `pytest.ini` in the directory with test. Fill the file with the following content. Let's suppose we want to replace word "test" for test functions only with word "check" (this is just an example):
+BTW, the naming rules described above can be changed if needed. For doing so create a file named `pytest.ini` in the directory with the tests. Let's suppose we want to replace the word "test" for test functions with the word "check", so the content of the `pytest.ini` would be the following:
 ```
 [pytest]
 python_files = test_*
@@ -54,10 +54,10 @@ python_functions = check_*
 
 `pip install pytest`: requires Python 3.7+.
 
-Install some of plugins:
+Install some of the plugins:
 - `pip install pytest-cov`: coverage reporting, produces coverage reports
-- `pip install pytest-html`: generates a HTML report for test results
-- `pip install pytest-xdist`: allows distributed execution modes (parallel test exevution). Tests have to be isolated, otherwise doesn't make sence :melting_face:
+- `pip install pytest-html`: generates an HTML report for test results
+- `pip install pytest-xdist`: allows distributed execution modes (parallel test execution). Tests have to be isolated, otherwise doesn't make sense :melting_face:
 
 ### Run `pytest` with command line arguments
 Run from the directory with tests: 
@@ -80,8 +80,7 @@ Command line for `pytest-html` plugin:
 With several arguments: `python -m pytest -s -v`
 
 ### `pytest` decorators 🌺📦
-- **`@pytest.fixture`**: need to use the same parameter for several tests? 
-Fixture will be executed before the test!
+- **`@pytest.fixture`**: need to use the same parameter for several tests? The fixture will be executed before the test!
 ```py
 @pytest.fixture()
 def import_package():
@@ -124,7 +123,7 @@ def test_1_about_feature_C():
   assert smth
 
 ```
-To launch only `test_1_about_feature_A` and `test_2_about_feature_A` run in command line `python -m pytest -m feature_a`. In case you have to run several tests by how they are marked, use `python -m pytest -m "feature_a or feature_b"` (for tests that are marked with at least one of decoratos) and `python -m pytest -m "feature_a or feature_b"`(for tests that are marked with both at the same time). Those code markers can be described in the `pytest.ini` file. The description is higly recommended for better code readability. For example:
+To launch only `test_1_about_feature_A` and `test_2_about_feature_A` run in the command line `python -m pytest -m feature_a`. In case you have to run several tests by how they are marked, use `python -m pytest -m "feature_a or feature_b"` (for tests that are marked with at least one of decorators) and `python -m pytest -m "feature_a or feature_b"`(for tests that are marked with both at the same time). Those code markers can be described in the `pytest.ini` file. The description is highly recommended for better code readability. For example:
 ```
 [pytest]
 python_files = test_*
@@ -136,7 +135,7 @@ markers =
 ```
  
 - **`@pytest.mark.skip`**: need to skip a test? 
-Test `test_to_skip` wont't be executed!
+Test `test_to_skip` won't be executed!
 
 ```py
 def test():
@@ -149,10 +148,10 @@ def test_to_skip():
 
 ## Some courses 💻📕🚀
 - [Elegant Automation Frameworks with Python and Pytest course](https://www.udemy.com/course/elegant-automation-frameworks-with-python-and-pytest/):🐌🐌🐌
-  - 👍Pro: tutor's language is pretty alive, with nice sence of humour. Explanations are detailed, the course has a lot of  examples of code that are very easy to understand or reuse. I also liked topics covered in the course👌 
-  - 👎Cons: Some explanations can seem too long and too detailed, the lecturer can step aside. Sometimes it can seem that there is not ehough or not at all theoretical part, just examples. I used speed 2x, but desired would be around 3x🐌. Last update of the course was June 2020👴
+  - 👍Pro: tutor's language is pretty alive, with a nice sense of humor. Explanations are detailed, and the course has a lot of examples of code that are very easy to understand or reuse. I also liked the topics covered in the course👌 
+  - 👎Cons: Some explanations can seem too long and too detailed, and the lecturer can step aside. Sometimes it can seem that it is not enough or not at all theoretical part, just examples. I used speed 2x, but desired would be around 3x🐌. The last update of the course was in June 2020👴
   - ⌚Duration: 6 hours 
 - [Unit Testing and Test Driven Development in Python course](https://udemy.com/course/unit-testing-and-tdd-in-python):
   - 👍Pro: short course to get into the topic fast with many examples to start using immediately.
-  - 👎Cons: sections about mocks and XUnit style are not detailed at all and provided too fast. 🚗💨 Code lacks explanations in general. Sometimes it's hard to follow the logic of the code.💩 ALso the course is pretty old, have not been updated since 2019. 👴
+  - 👎Cons: sections about mocks and XUnit style are not detailed at all and provided too fast. 🚗💨 Code lacks explanations in general. Sometimes it's hard to follow the logic of the code.💩 ALso the course is pretty old and has not been updated since 2019. 👴
   - ⌚Duration: 2 hours 
